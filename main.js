@@ -66,8 +66,8 @@ function generateReceipt(cartItemDetailsWithTotalPrice, totalPrice) {
     return result;
 }
 
-function generateReceiptItem(cartItemDetailsWithTotalPrice) {
-    return `Name: ${cartItemDetailsWithTotalPrice.itemName}, Quantity: ${cartItemDetailsWithTotalPrice.quantity}, Unit price: ${cartItemDetailsWithTotalPrice.price} (yuan), Subtotal: ${cartItemDetailsWithTotalPrice.totalPrice} (yuan)\n`
+function generateReceiptItem(cartItem) {
+    return `Name: ${cartItem.itemName}, Quantity: ${cartItem.quantity}, Unit price: ${cartItem.price} (yuan), Subtotal: ${cartItem.totalPrice} (yuan)\n`
 }
 
 printReceipt([
