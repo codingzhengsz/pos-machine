@@ -136,3 +136,4 @@ Suppose that our database is as follows:
 
 # ContextMap
 
+![context_map.png](https://i.loli.net/2020/07/21/vOE5htSQ3LrNFxa.png)
