@@ -139,6 +139,6 @@ Suppose that our database is as follows:
     | C    | 单纯输出一个string，只需要一行代码 |
     | A    | 之前忘记了打印其实也是一个任务，之后会注意 |
 
-# ContextMap
+# Context Map
 
-![context_map.png](/context_map.png)
+![context_map.png](https://i.loli.net/2020/07/22/oMpHlLwFS45N1s7.png)
