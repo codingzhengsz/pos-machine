@@ -99,7 +99,6 @@ Suppose that our database is as follows:
 
 3. 计算每一项的总价
   - Input：cartItemDetails:[{barcode: string, itemName:string, quantity: int, price: int}]
-
   - Output: cartItemDetailsWithTotalPrice:[{barcode: string, itemName:string, quantity: int, price: int, totalPrice: int}]
 
     |      | 计算每一项的总价                                             |
@@ -111,7 +110,6 @@ Suppose that our database is as follows:
 
 4. 计算所有项的总价
   - Input：cartItemDetailsWithTotalPrice:[{barcode: string, itemName:string, quantity: int, price: int, totalPrice: int}]
-
   - Output: totalPrice: int
 
     |      | 计算所有项的总价                                             |
@@ -122,7 +120,6 @@ Suppose that our database is as follows:
     | A    | 在变量的命名方面还是存在薄弱点，可以向同学请教他们的命名方法 |
 5. 生成收据
   - Input：cartItemDetailsWithTotalPrice:[{barcode: string, itemName:string, quantity: int, price: int, totalPrice: int}], totalPrice: int
-
   - Output: receipt: string
 
     |      | 生成收据                                                     |
@@ -131,9 +128,17 @@ Suppose that our database is as follows:
     | D    | 10min                                                        |
     | C    | 对于生成收据，要去验证跑单元测试需要调整某些细微的点，比如字符的问题，空格的问题 |
     | A    | 编写代码还是应该要小心，尽量避免写太快导致花更多的时间在检查字符问题 |
-
+6. 打印收据
+  - Input: receipt: string
+  - Output: consoleReceipt
     
+    |      | 打印收据                                                     |
+    | ---- | ------------------------------------------------------------ |
+    | P    | 1min                                                         |
+    | D    | 1min                                                         |
+    | C    | 单纯输出一个string，只需要一行代码 |
+    | A    | 之前忘记了打印其实也是一个任务，之后会注意 |
 
 # ContextMap
 
-![context_map.png](https://i.loli.net/2020/07/21/vOE5htSQ3LrNFxa.png)
+![context_map.png](/context_map.png)
