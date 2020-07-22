@@ -4,7 +4,7 @@ function printReceipt(barcodes) {
     let cartItemDetailsWithTotalPrice = calculateTotalPriceOfEachItem(cartItemDetails);
     let totalPrice = calculateTotalPrice(cartItemDetailsWithTotalPrice);
     let receipt = generateReceipt(cartItemDetailsWithTotalPrice, totalPrice);
-    printReceipt(receipt);
+    printReceiptInfo(receipt);
 }
 
 function countCartItem(barcodes) {
@@ -74,7 +74,7 @@ function generateReceiptItem(cartItem) {
     return `Name: ${cartItem.itemName}, Quantity: ${cartItem.quantity}, Unit price: ${cartItem.price} (yuan), Subtotal: ${cartItem.totalPrice} (yuan)\n`
 }
 
-function printReceipt(receipt) {
+function printReceiptInfo(receipt) {
     console.log(receipt)
 }
 
