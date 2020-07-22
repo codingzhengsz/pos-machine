@@ -1,11 +1,10 @@
-const data = require('./data')
-
 function printReceipt(barcodes) {
     let cartItems = countCartItem(barcodes);
     let cartItemDetails = getItemDetails(cartItems);
     let cartItemDetailsWithTotalPrice = calculateTotalPriceOfEachItem(cartItemDetails);
     let totalPrice = calculateTotalPrice(cartItemDetailsWithTotalPrice);
-    console.log(generateReceipt(cartItemDetailsWithTotalPrice, totalPrice));
+    let receipt = generateReceipt(cartItemDetailsWithTotalPrice, totalPrice);
+    printReceipt(receipt);
 }
 
 function countCartItem(barcodes) {
@@ -29,6 +28,7 @@ function countCartItem(barcodes) {
 }
 
 function getItemDetails(cartItems) {
+    let data = getItemDetailsInfos();
     for (let i = 0; i < data.length; i++) {
         for (let j = 0 ;j <  cartItems.length; j++) {
             if (data[i].barcode === cartItems[j].barcode) {
@@ -38,6 +38,10 @@ function getItemDetails(cartItems) {
         }
     }
     return cartItems;
+}
+
+function getItemDetailsInfos() {
+    return require('./data')
 }
 
 function calculateTotalPriceOfEachItem(cartItemDetails) {
@@ -68,6 +72,10 @@ function generateReceipt(cartItemDetailsWithTotalPrice, totalPrice) {
 
 function generateReceiptItem(cartItem) {
     return `Name: ${cartItem.itemName}, Quantity: ${cartItem.quantity}, Unit price: ${cartItem.price} (yuan), Subtotal: ${cartItem.totalPrice} (yuan)\n`
+}
+
+function printReceipt(receipt) {
+    console.log(receipt)
 }
 
 printReceipt([
